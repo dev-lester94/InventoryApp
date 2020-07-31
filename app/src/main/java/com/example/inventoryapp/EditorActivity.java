@@ -364,6 +364,7 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
                         Toast.LENGTH_SHORT).show();
             }
             //Log.i(LOG_TAG,numberR);
+            //testing
         }
 
     }
