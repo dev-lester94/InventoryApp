@@ -2,6 +2,8 @@ package com.example.inventoryapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NavUtils;
+import androidx.core.content.ContextCompat;
+import androidx.core.graphics.drawable.DrawableCompat;
 
 import android.app.AlertDialog;
 import android.app.LoaderManager;
@@ -11,6 +13,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -115,7 +119,16 @@ public class EditorActivity extends AppCompatActivity implements LoaderManager.L
 
             mEmailButton.setEnabled(false);
 
+            Drawable backgroundDrawable = DrawableCompat.wrap(mEmailButton.getBackground()).mutate();
+            DrawableCompat.setTint(backgroundDrawable, Color.GRAY);
+
+
+
             mPhoneButton.setEnabled(false);
+
+            backgroundDrawable = DrawableCompat.wrap(mPhoneButton.getBackground()).mutate();
+            DrawableCompat.setTint(backgroundDrawable, Color.GRAY);
+
 
         }else{
             //Edit mode, create onclicklisteners to the buttons
